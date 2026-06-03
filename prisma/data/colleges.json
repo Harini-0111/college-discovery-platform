@@ -1,0 +1,1702 @@
+[
+  {
+    "name": "NIT Delhi - Institute of Technology 1",
+    "slug": "institute-of-technology-1-delhi",
+    "location": "Delhi, India",
+    "baseFees": 160505.569367241,
+    "rating": "5.0",
+    "placements": "Highest: 62 LPA, Average: 17 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 591153.3536808372
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 372085.34902088117
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 8500,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 8472,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Bangalore - Institute of Technology 2",
+    "slug": "institute-of-technology-2-bangalore",
+    "location": "Bangalore, India",
+    "baseFees": 164254.73957201664,
+    "rating": "4.5",
+    "placements": "Highest: 55 LPA, Average: 11 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 461153.8083099873
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 485675.19682235486
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 13216,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 31135,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Hyderabad - Institute of Technology 3",
+    "slug": "institute-of-technology-3-hyderabad",
+    "location": "Hyderabad, India",
+    "baseFees": 122226.55535591648,
+    "rating": "3.7",
+    "placements": "Highest: 47 LPA, Average: 8 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 443747.32326423307
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 350932.01741690125
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 21121,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 19474,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Chennai - Institute of Technology 4",
+    "slug": "institute-of-technology-4-chennai",
+    "location": "Chennai, India",
+    "baseFees": 230808.21411348812,
+    "rating": "3.7",
+    "placements": "Highest: 63 LPA, Average: 13 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 596841.4218889993
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 466951.7825629724
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 2259,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 6861,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Pune - Institute of Technology 5",
+    "slug": "institute-of-technology-5-pune",
+    "location": "Pune, India",
+    "baseFees": 216354.57504254772,
+    "rating": "4.3",
+    "placements": "Highest: 62 LPA, Average: 16 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 515276.2573300525
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 476504.3966666112
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 20300,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 7629,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "NIT Kolkata - Institute of Technology 6",
+    "slug": "institute-of-technology-6-kolkata",
+    "location": "Kolkata, India",
+    "baseFees": 161264.34077928917,
+    "rating": "4.4",
+    "placements": "Highest: 46 LPA, Average: 12 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 500101.7679345252
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 468229.36307470716
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 10148,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 19257,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Mumbai - Institute of Technology 7",
+    "slug": "institute-of-technology-7-mumbai",
+    "location": "Mumbai, India",
+    "baseFees": 175545.8698921927,
+    "rating": "4.4",
+    "placements": "Highest: 51 LPA, Average: 11 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 441833.3046110587
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 379159.35644911387
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 6696,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 20151,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Delhi - Institute of Technology 8",
+    "slug": "institute-of-technology-8-delhi",
+    "location": "Delhi, India",
+    "baseFees": 142089.21273643247,
+    "rating": "3.8",
+    "placements": "Highest: 59 LPA, Average: 17 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 568093.6791288017
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 454408.5008003975
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 3610,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 13700,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Bangalore - Institute of Technology 9",
+    "slug": "institute-of-technology-9-bangalore",
+    "location": "Bangalore, India",
+    "baseFees": 203393.1083441716,
+    "rating": "4.6",
+    "placements": "Highest: 33 LPA, Average: 10 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 568854.1616069634
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 483605.02379324613
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 10343,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 9919,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Hyderabad - Institute of Technology 10",
+    "slug": "institute-of-technology-10-hyderabad",
+    "location": "Hyderabad, India",
+    "baseFees": 259644.90318974556,
+    "rating": "4.2",
+    "placements": "Highest: 24 LPA, Average: 9 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 589739.0068993331
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 422001.7852118504
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 5702,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 5537,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "NIT Chennai - Institute of Technology 11",
+    "slug": "institute-of-technology-11-chennai",
+    "location": "Chennai, India",
+    "baseFees": 223049.22849344488,
+    "rating": "4.4",
+    "placements": "Highest: 62 LPA, Average: 15 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 480637.9328510707
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 359459.50325807364
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 16150,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 10889,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Pune - Institute of Technology 12",
+    "slug": "institute-of-technology-12-pune",
+    "location": "Pune, India",
+    "baseFees": 140544.47903523393,
+    "rating": "4.2",
+    "placements": "Highest: 64 LPA, Average: 15 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 472676.2173955798
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 457175.3355203131
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 13759,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 26146,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Kolkata - Institute of Technology 13",
+    "slug": "institute-of-technology-13-kolkata",
+    "location": "Kolkata, India",
+    "baseFees": 193201.74061905412,
+    "rating": "4.6",
+    "placements": "Highest: 27 LPA, Average: 15 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 488608.04758204194
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 375438.3006199198
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 13915,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 30967,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Mumbai - Institute of Technology 14",
+    "slug": "institute-of-technology-14-mumbai",
+    "location": "Mumbai, India",
+    "baseFees": 119085.32059712989,
+    "rating": "3.7",
+    "placements": "Highest: 31 LPA, Average: 12 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 410175.04601097776
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 358670.7666042553
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 12428,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 11303,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Delhi - Institute of Technology 15",
+    "slug": "institute-of-technology-15-delhi",
+    "location": "Delhi, India",
+    "baseFees": 293499.1902769591,
+    "rating": "4.6",
+    "placements": "Highest: 43 LPA, Average: 17 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 407184.49366618897
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 422827.27689874504
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 8416,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 13786,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "NIT Bangalore - Institute of Technology 16",
+    "slug": "institute-of-technology-16-bangalore",
+    "location": "Bangalore, India",
+    "baseFees": 197983.72738952166,
+    "rating": "4.7",
+    "placements": "Highest: 21 LPA, Average: 17 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 521765.48131268146
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 451014.5640521998
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 20317,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 9116,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Hyderabad - Institute of Technology 17",
+    "slug": "institute-of-technology-17-hyderabad",
+    "location": "Hyderabad, India",
+    "baseFees": 284321.36895569693,
+    "rating": "3.6",
+    "placements": "Highest: 30 LPA, Average: 8 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 486007.81613320793
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 388943.92619772936
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 10397,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 31699,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Chennai - Institute of Technology 18",
+    "slug": "institute-of-technology-18-chennai",
+    "location": "Chennai, India",
+    "baseFees": 173845.88328912237,
+    "rating": "4.6",
+    "placements": "Highest: 26 LPA, Average: 15 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 455362.53094515187
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 421002.73097300617
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 20746,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 9836,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Pune - Institute of Technology 19",
+    "slug": "institute-of-technology-19-pune",
+    "location": "Pune, India",
+    "baseFees": 201399.04687902826,
+    "rating": "4.1",
+    "placements": "Highest: 35 LPA, Average: 12 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 534908.3806503657
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 405815.72424651287
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 19431,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 10251,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Kolkata - Institute of Technology 20",
+    "slug": "institute-of-technology-20-kolkata",
+    "location": "Kolkata, India",
+    "baseFees": 236780.22295752942,
+    "rating": "4.8",
+    "placements": "Highest: 35 LPA, Average: 8 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 439125.1678884075
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 419515.7811248388
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 7744,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 22923,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "NIT Mumbai - Institute of Technology 21",
+    "slug": "institute-of-technology-21-mumbai",
+    "location": "Mumbai, India",
+    "baseFees": 275512.55690194643,
+    "rating": "4.3",
+    "placements": "Highest: 30 LPA, Average: 12 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 432922.87488770334
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 430238.6724305691
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 9898,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 22374,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Delhi - Institute of Technology 22",
+    "slug": "institute-of-technology-22-delhi",
+    "location": "Delhi, India",
+    "baseFees": 208079.34953401313,
+    "rating": "4.5",
+    "placements": "Highest: 63 LPA, Average: 11 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 406645.3144197805
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 380828.7265518578
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 10905,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 33446,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Bangalore - Institute of Technology 23",
+    "slug": "institute-of-technology-23-bangalore",
+    "location": "Bangalore, India",
+    "baseFees": 231261.424278475,
+    "rating": "4.7",
+    "placements": "Highest: 34 LPA, Average: 8 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 452865.91305048927
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 494173.28797569056
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 5199,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 20078,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Hyderabad - Institute of Technology 24",
+    "slug": "institute-of-technology-24-hyderabad",
+    "location": "Hyderabad, India",
+    "baseFees": 189201.08922284018,
+    "rating": "4.2",
+    "placements": "Highest: 68 LPA, Average: 14 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 595602.0991499689
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 403738.6661323541
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 4555,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 31665,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Chennai - Institute of Technology 25",
+    "slug": "institute-of-technology-25-chennai",
+    "location": "Chennai, India",
+    "baseFees": 222416.94437740935,
+    "rating": "3.7",
+    "placements": "Highest: 68 LPA, Average: 15 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 426177.34373738535
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 373263.4190612316
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 5908,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 27882,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "NIT Pune - Institute of Technology 26",
+    "slug": "institute-of-technology-26-pune",
+    "location": "Pune, India",
+    "baseFees": 126552.05286336431,
+    "rating": "4.0",
+    "placements": "Highest: 38 LPA, Average: 15 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 431390.9939267687
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 469348.379491918
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 10076,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 30778,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Kolkata - Institute of Technology 27",
+    "slug": "institute-of-technology-27-kolkata",
+    "location": "Kolkata, India",
+    "baseFees": 133410.968479303,
+    "rating": "4.3",
+    "placements": "Highest: 34 LPA, Average: 12 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 540853.3952187852
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 480573.5471334582
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 12742,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 25876,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Mumbai - Institute of Technology 28",
+    "slug": "institute-of-technology-28-mumbai",
+    "location": "Mumbai, India",
+    "baseFees": 268945.33372485824,
+    "rating": "3.8",
+    "placements": "Highest: 42 LPA, Average: 8 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 430890.5428896189
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 395814.46324357163
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 6211,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 22881,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Delhi - Institute of Technology 29",
+    "slug": "institute-of-technology-29-delhi",
+    "location": "Delhi, India",
+    "baseFees": 204488.51965471375,
+    "rating": "4.8",
+    "placements": "Highest: 69 LPA, Average: 14 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 520612.3777142109
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 481644.47845486354
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 7654,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 15985,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Bangalore - Institute of Technology 30",
+    "slug": "institute-of-technology-30-bangalore",
+    "location": "Bangalore, India",
+    "baseFees": 134945.7794247158,
+    "rating": "4.8",
+    "placements": "Highest: 38 LPA, Average: 16 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 410434.92616501445
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 484693.53164685937
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 8731,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 8595,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "NIT Hyderabad - Institute of Technology 31",
+    "slug": "institute-of-technology-31-hyderabad",
+    "location": "Hyderabad, India",
+    "baseFees": 236749.83750552437,
+    "rating": "4.9",
+    "placements": "Highest: 54 LPA, Average: 16 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 568822.853311803
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 477413.88421032636
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 7722,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 27255,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Chennai - Institute of Technology 32",
+    "slug": "institute-of-technology-32-chennai",
+    "location": "Chennai, India",
+    "baseFees": 159443.10955334795,
+    "rating": "4.5",
+    "placements": "Highest: 61 LPA, Average: 16 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 532277.7913331185
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 384718.4305230042
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 15564,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 28820,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Pune - Institute of Technology 33",
+    "slug": "institute-of-technology-33-pune",
+    "location": "Pune, India",
+    "baseFees": 150222.1809978301,
+    "rating": "4.8",
+    "placements": "Highest: 62 LPA, Average: 10 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 475217.29432398814
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 495649.2933025936
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 19587,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 27873,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Kolkata - Institute of Technology 34",
+    "slug": "institute-of-technology-34-kolkata",
+    "location": "Kolkata, India",
+    "baseFees": 113017.51608096712,
+    "rating": "4.2",
+    "placements": "Highest: 27 LPA, Average: 17 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 510142.262969965
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 424845.2544213962
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 5619,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 33522,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Mumbai - Institute of Technology 35",
+    "slug": "institute-of-technology-35-mumbai",
+    "location": "Mumbai, India",
+    "baseFees": 113048.26266220366,
+    "rating": "4.7",
+    "placements": "Highest: 52 LPA, Average: 9 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 511325.7656236107
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 450100.7562932908
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 13020,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 10481,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "NIT Delhi - Institute of Technology 36",
+    "slug": "institute-of-technology-36-delhi",
+    "location": "Delhi, India",
+    "baseFees": 222555.57170926296,
+    "rating": "4.8",
+    "placements": "Highest: 31 LPA, Average: 15 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 497611.0932366447
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 386335.4381984652
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 3668,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 33689,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Bangalore - Institute of Technology 37",
+    "slug": "institute-of-technology-37-bangalore",
+    "location": "Bangalore, India",
+    "baseFees": 207719.5741621256,
+    "rating": "4.9",
+    "placements": "Highest: 39 LPA, Average: 11 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 562685.9642026883
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 496339.07956028933
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 12225,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 15022,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Hyderabad - Institute of Technology 38",
+    "slug": "institute-of-technology-38-hyderabad",
+    "location": "Hyderabad, India",
+    "baseFees": 130048.34512945717,
+    "rating": "4.7",
+    "placements": "Highest: 32 LPA, Average: 8 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 473835.3031160756
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 490214.11671449384
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 5380,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 31555,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Chennai - Institute of Technology 39",
+    "slug": "institute-of-technology-39-chennai",
+    "location": "Chennai, India",
+    "baseFees": 163696.08867668232,
+    "rating": "4.3",
+    "placements": "Highest: 63 LPA, Average: 8 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 421214.31330362486
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 428770.33781347197
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 9620,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 17976,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Pune - Institute of Technology 40",
+    "slug": "institute-of-technology-40-pune",
+    "location": "Pune, India",
+    "baseFees": 130980.42389214472,
+    "rating": "3.6",
+    "placements": "Highest: 25 LPA, Average: 16 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 528786.1435132929
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 453700.8160315146
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 20396,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 27116,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "NIT Kolkata - Institute of Technology 41",
+    "slug": "institute-of-technology-41-kolkata",
+    "location": "Kolkata, India",
+    "baseFees": 205094.75405582594,
+    "rating": "4.5",
+    "placements": "Highest: 46 LPA, Average: 9 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 505687.6699101706
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 497392.27323971095
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 5921,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 15043,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Mumbai - Institute of Technology 42",
+    "slug": "institute-of-technology-42-mumbai",
+    "location": "Mumbai, India",
+    "baseFees": 247332.97480970543,
+    "rating": "4.9",
+    "placements": "Highest: 44 LPA, Average: 11 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 581608.0041020365
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 455269.2659820048
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 11335,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 20133,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Delhi - Institute of Technology 43",
+    "slug": "institute-of-technology-43-delhi",
+    "location": "Delhi, India",
+    "baseFees": 232028.0401644558,
+    "rating": "4.5",
+    "placements": "Highest: 22 LPA, Average: 9 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 599395.2708636727
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 476274.00226867374
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 12874,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 34532,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Bangalore - Institute of Technology 44",
+    "slug": "institute-of-technology-44-bangalore",
+    "location": "Bangalore, India",
+    "baseFees": 171590.23699983602,
+    "rating": "4.7",
+    "placements": "Highest: 51 LPA, Average: 14 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 591183.5859261106
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 408472.87261430366
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 16114,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 17734,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Hyderabad - Institute of Technology 45",
+    "slug": "institute-of-technology-45-hyderabad",
+    "location": "Hyderabad, India",
+    "baseFees": 292728.69068135985,
+    "rating": "4.0",
+    "placements": "Highest: 21 LPA, Average: 8 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 479558.26449561975
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 456467.76142802
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 6738,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 24580,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "NIT Chennai - Institute of Technology 46",
+    "slug": "institute-of-technology-46-chennai",
+    "location": "Chennai, India",
+    "baseFees": 174430.43635787768,
+    "rating": "3.7",
+    "placements": "Highest: 60 LPA, Average: 12 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 507535.4613621568
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 478677.2651368908
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 12296,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 11026,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIIT Pune - Institute of Technology 47",
+    "slug": "institute-of-technology-47-pune",
+    "location": "Pune, India",
+    "baseFees": 167943.8805526173,
+    "rating": "4.6",
+    "placements": "Highest: 69 LPA, Average: 8 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 414578.41189258714
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 468057.01595010643
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 2767,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 5092,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "Private Engineering College Kolkata - Institute of Technology 48",
+    "slug": "institute-of-technology-48-kolkata",
+    "location": "Kolkata, India",
+    "baseFees": 187904.72686336888,
+    "rating": "4.8",
+    "placements": "Highest: 56 LPA, Average: 10 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 593057.657618014
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 436181.0591904173
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 4115,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 24815,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "State University Mumbai - Institute of Technology 49",
+    "slug": "institute-of-technology-49-mumbai",
+    "location": "Mumbai, India",
+    "baseFees": 215018.0654800806,
+    "rating": "4.0",
+    "placements": "Highest: 40 LPA, Average: 9 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 519247.0285348309
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 493938.80555670254
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 20856,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 17015,
+        "year": 2023
+      }
+    ]
+  },
+  {
+    "name": "IIT Delhi - Institute of Technology 50",
+    "slug": "institute-of-technology-50-delhi",
+    "location": "Delhi, India",
+    "baseFees": 125458.9728325831,
+    "rating": "4.8",
+    "placements": "Highest: 63 LPA, Average: 15 LPA",
+    "courses": [
+      {
+        "name": "B.Tech Computer Science",
+        "durationYears": 4,
+        "totalFees": 409644.846103394
+      },
+      {
+        "name": "B.Tech Electronics",
+        "durationYears": 4,
+        "totalFees": 405622.44501726
+      }
+    ],
+    "cutoffs": [
+      {
+        "examName": "JEE Main",
+        "category": "General",
+        "closingRank": 20774,
+        "year": 2023
+      },
+      {
+        "examName": "JEE Main",
+        "category": "OBC",
+        "closingRank": 9953,
+        "year": 2023
+      }
+    ]
+  }
+]

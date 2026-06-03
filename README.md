@@ -1,119 +1,36 @@
-# College Discovery Platform
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A production-grade MVP for helping students discover, compare, and evaluate colleges based on fees, ratings, location, placements, and eligibility criteria.
+## Getting Started
 
-## Features
-
-### Authentication
-- User registration
-- User login
-- Protected routes
-- Save favorite colleges
-
-### College Search
-- Search colleges by name
-- Filter by location
-- Filter by fees
-- Filter by ratings
-- Pagination support
-
-### College Comparison
-- Compare multiple colleges side-by-side
-- Compare fees, ratings, placements, and location
-
-### Predictor Tool
-- Recommend colleges based on exam and rank
-- Dataset-driven recommendations
-
-## Tech Stack
-
-### Frontend
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-
-### Backend
-- Next.js API Routes
-- TypeScript
-
-### Database
-- PostgreSQL
-- Prisma ORM
-
-### Deployment
-- Vercel
-- Neon PostgreSQL
-
-## Architecture
-
-The application follows a layered architecture:
-
-Frontend
-↓
-API Routes
-↓
-Service Layer
-↓
-Prisma ORM
-↓
-PostgreSQL
-
-## Database Schema
-
-Entities:
-- Users
-- Colleges
-- Courses
-- Reviews
-- Saved Colleges
-
-## API Endpoints
-
-### Authentication
-POST /api/auth/register
-
-POST /api/auth/login
-
-### Colleges
-GET /api/colleges
-
-GET /api/colleges/:id
-
-### Search
-GET /api/colleges/search
-
-### Comparison
-POST /api/compare
-
-### Predictor
-POST /api/predictor
-
-## Installation
+First, run the development server:
 
 ```bash
-git clone <repo-url>
-
-npm install
-
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Environment Variables
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```env
-DATABASE_URL=
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-NEXTAUTH_SECRET=
-```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Future Enhancements
+## Learn More
 
-- Advanced recommendation engine
-- College reviews moderation
-- AI-powered college suggestions
-- Analytics dashboard
+To learn more about Next.js, take a look at the following resources:
 
-## Author
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Harini Patsa
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

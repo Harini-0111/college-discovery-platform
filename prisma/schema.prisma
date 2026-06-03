@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String         @id @default(cuid())
+  email         String         @unique
+  passwordHash  String?
+  name          String?
+  savedColleges SavedCollege[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model College {
+  id              String         @id @default(cuid())
+  name            String
+  slug            String         @unique
+  location        String
+  establishedYear Int?
+  description     String?
+  baseFees        Float
+  rating          Float          @default(0)
+  placements      String?
+  courses         Course[]
+  cutoffs         Cutoff[]
+  savedBy         SavedCollege[]
+}
+
+model Course {
+  id            String   @id @default(cuid())
+  collegeId     String
+  name          String
+  durationYears Int
+  totalFees     Float
+  college       College  @relation(fields: [collegeId], references: [id])
+}
+
+model SavedCollege {
+  id        String   @id @default(cuid())
+  userId    String
+  collegeId String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  college   College  @relation(fields: [collegeId], references: [id])
+
+  @@unique([userId, collegeId])
+}
+
+model Cutoff {
+  id          String   @id @default(cuid())
+  collegeId   String
+  examName    String
+  category    String
+  closingRank Int
+  year        Int
+  college     College  @relation(fields: [collegeId], references: [id])
+
+  @@index([examName, category, closingRank])
+}
