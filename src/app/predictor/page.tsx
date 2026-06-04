@@ -59,16 +59,16 @@ export default function PredictorPage() {
         <CardContent className="p-6 sm:p-8">
           <form onSubmit={handlePredict} className="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Exam</label>
-              <Select value={form.examName} onChange={e => setForm({...form, examName: e.target.value})}>
+              <label htmlFor="exam" className="block text-sm font-semibold text-gray-700 mb-1.5">Exam</label>
+              <Select id="exam" value={form.examName} onChange={e => setForm({...form, examName: e.target.value})}>
                 <option value="JEE Main">JEE Main</option>
                 <option value="MHT CET">MHT CET</option>
                 <option value="COMEDK">COMEDK</option>
               </Select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Category</label>
-              <Select value={form.category} onChange={e => setForm({...form, category: e.target.value})}>
+              <label htmlFor="category" className="block text-sm font-semibold text-gray-700 mb-1.5">Category</label>
+              <Select id="category" value={form.category} onChange={e => setForm({...form, category: e.target.value})}>
                 <option value="General">General</option>
                 <option value="OBC">OBC</option>
                 <option value="SC">SC</option>
@@ -76,8 +76,9 @@ export default function PredictorPage() {
               </Select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Your Rank</label>
+              <label htmlFor="rank" className="block text-sm font-semibold text-gray-700 mb-1.5">Your Rank</label>
               <Input 
+                id="rank"
                 type="number" 
                 placeholder="e.g. 15000" 
                 required 
@@ -87,7 +88,7 @@ export default function PredictorPage() {
               />
             </div>
             <div>
-              <Button type="submit" className="w-full h-[42px]" disabled={isLoading || !form.rank}>
+              <Button type="submit" className="w-full" disabled={isLoading || !form.rank}>
                 {isLoading ? <Loader2 className="animate-spin mx-auto" size={20} /> : 'Predict Colleges'}
               </Button>
             </div>
@@ -98,13 +99,18 @@ export default function PredictorPage() {
       {error && <p className="text-red-500 text-center mb-6">{error}</p>}
 
       {results && (
-        <div className="space-y-4">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Your Chances ({results.length} colleges found)</h2>
+        <div className="space-y-6">
+          <div className="flex items-center justify-between border-b border-gray-200 pb-4">
+            <h2 className="text-2xl font-bold text-gray-900">Your Chances</h2>
+            <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">{results.length} colleges found</span>
+          </div>
           
           {results.length === 0 ? (
-            <Card>
-              <CardContent className="py-12 text-center text-gray-500">
-                No colleges found in this rank range. Try adjusting your rank or category.
+            <Card className="border-gray-100 shadow-sm bg-white">
+              <CardContent className="py-16 flex flex-col items-center text-center">
+                <AlertTriangle className="text-yellow-500 mb-4" size={48} />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">No Matches Found</h3>
+                <p className="text-gray-500 max-w-md">Try adjusting your rank or changing the category to see more options.</p>
               </CardContent>
             </Card>
           ) : (

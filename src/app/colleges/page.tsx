@@ -3,7 +3,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Input, Select } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { CollegeCard } from '@/components/features/CollegeCard';
-import { Search, Filter, Loader2 } from 'lucide-react';
+import { CollegeCardSkeleton } from '@/components/features/CollegeCardSkeleton';
+import { Filter, AlertCircle } from 'lucide-react';
 
 export default function CollegesPage() {
   const [colleges, setColleges] = useState([]);
@@ -33,7 +34,6 @@ export default function CollegesPage() {
       setColleges(data.data || []);
       setTotal(data.meta?.total || 0);
     } catch {
-      console.error(error);
       setColleges([]);
     } finally {
       setIsLoading(false);
@@ -50,21 +50,26 @@ export default function CollegesPage() {
     setFilters(prev => ({ ...prev, [key]: value }));
   };
 
+  const handleClearFilters = () => {
+    setFilters({ q: '', location: '', minRating: '', maxFee: '' });
+  };
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row gap-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex flex-col lg:flex-row gap-10">
       
       {/* Sidebar Filters */}
-      <aside className="w-full md:w-64 flex-shrink-0 space-y-6">
-        <div>
-          <h2 className="text-lg font-bold text-gray-900 flex items-center gap-2 mb-4">
-            <Filter size={20} />
+      <aside className="w-full lg:w-72 flex-shrink-0">
+        <div className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm sticky top-24">
+          <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2 mb-6">
+            <Filter size={20} className="text-blue-600" />
             Filters
           </h2>
           
-          <div className="space-y-4">
+          <div className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Search Name</label>
+              <label htmlFor="filter-q" className="block text-sm font-semibold text-gray-700 mb-1.5">Search Name</label>
               <Input 
+                id="filter-q"
                 placeholder="e.g. Institute of Technology..." 
                 value={filters.q}
                 onChange={(e) => handleFilterChange('q', e.target.value)}
@@ -72,8 +77,9 @@ export default function CollegesPage() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
+              <label htmlFor="filter-location" className="block text-sm font-semibold text-gray-700 mb-1.5">Location</label>
               <Input 
+                id="filter-location"
                 placeholder="e.g. Mumbai, Delhi..." 
                 value={filters.location}
                 onChange={(e) => handleFilterChange('location', e.target.value)}
@@ -81,8 +87,9 @@ export default function CollegesPage() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Min Rating</label>
+              <label htmlFor="filter-rating" className="block text-sm font-semibold text-gray-700 mb-1.5">Min Rating</label>
               <Select 
+                id="filter-rating"
                 value={filters.minRating}
                 onChange={(e) => handleFilterChange('minRating', e.target.value)}
               >
@@ -94,8 +101,9 @@ export default function CollegesPage() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Max Fees (INR)</label>
+              <label htmlFor="filter-fee" className="block text-sm font-semibold text-gray-700 mb-1.5">Max Fees (INR)</label>
               <Select 
+                id="filter-fee"
                 value={filters.maxFee}
                 onChange={(e) => handleFilterChange('maxFee', e.target.value)}
               >
@@ -108,34 +116,43 @@ export default function CollegesPage() {
             
             <Button 
               variant="outline" 
-              className="w-full mt-4"
-              onClick={() => setFilters({ q: '', location: '', minRating: '', maxFee: '' })}
+              className="w-full mt-6"
+              onClick={handleClearFilters}
             >
-              Clear Filters
+              Clear All Filters
             </Button>
           </div>
         </div>
       </aside>
 
       {/* Main Content */}
-      <div className="flex-1">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">Explore Colleges</h1>
-          <span className="text-gray-500">{total} results found</span>
+      <div className="flex-1 min-w-0">
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 gap-4">
+          <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">Explore Colleges</h1>
+          <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+            {total} results found
+          </span>
         </div>
 
         {isLoading ? (
-          <div className="flex justify-center items-center py-20">
-            <Loader2 className="animate-spin text-blue-600" size={48} />
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {[...Array(6)].map((_, i) => <CollegeCardSkeleton key={i} />)}
           </div>
         ) : colleges.length === 0 ? (
-          <div className="text-center py-20 bg-white rounded-xl border border-gray-100 shadow-sm">
-            <Search className="mx-auto text-gray-300 mb-4" size={48} />
-            <h3 className="text-lg font-medium text-gray-900 mb-1">No colleges found</h3>
-            <p className="text-gray-500">Try adjusting your filters to find what you&apos;re looking for.</p>
+          <div className="flex flex-col items-center justify-center py-24 bg-white rounded-2xl border border-gray-100 shadow-sm text-center px-4">
+            <div className="bg-gray-50 p-4 rounded-full mb-4">
+              <AlertCircle className="text-gray-400" size={48} />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">No colleges found</h3>
+            <p className="text-gray-500 mb-6 max-w-md">
+              We couldn&apos;t find any colleges matching your current filters. Try adjusting your search criteria.
+            </p>
+            <Button variant="primary" onClick={handleClearFilters}>
+              Clear Filters
+            </Button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {colleges.map((college: any /* eslint-disable-line @typescript-eslint/no-explicit-any */) => (
               <CollegeCard key={college.id} college={college} />
             ))}

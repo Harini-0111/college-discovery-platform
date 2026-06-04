@@ -53,16 +53,16 @@ export default function CollegeDetailPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       {/* Header Profile */}
       <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col md:flex-row gap-8 items-start md:items-center">
-        <div className="w-32 h-32 bg-blue-100 rounded-xl flex-shrink-0 flex items-center justify-center text-blue-600 font-bold text-4xl">
+        <div className="w-32 h-32 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl flex-shrink-0 flex items-center justify-center text-blue-600 font-extrabold text-5xl shadow-inner">
           {college.name.charAt(0)}
         </div>
         <div className="flex-1">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">{college.name}</h1>
-          <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
-            <span className="flex items-center gap-1"><MapPin size={16} /> {college.location}</span>
-            <span className="flex items-center gap-1 text-yellow-600 font-medium"><Star size={16} className="fill-yellow-500" /> {college.rating.toFixed(1)} Rating</span>
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-3 tracking-tight">{college.name}</h1>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-5">
+            <span className="flex items-center gap-1.5 font-medium"><MapPin size={18} className="text-gray-400" /> {college.location}</span>
+            <span className="flex items-center gap-1.5 font-bold text-gray-900"><Star size={18} className="text-yellow-500 fill-yellow-500" /> {college.rating.toFixed(1)} / 5.0</span>
           </div>
-          <p className="text-gray-600 max-w-3xl leading-relaxed">
+          <p className="text-gray-600 max-w-4xl leading-relaxed text-lg">
             {college.description || `Established as a premier institution in ${college.location}, offering excellent academic programs and industry-leading placements.`}
           </p>
         </div>

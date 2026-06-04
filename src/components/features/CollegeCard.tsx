@@ -16,14 +16,14 @@ interface College {
 
 export const CollegeCard = ({ college }: { college: College }) => {
   return (
-    <Card className="flex flex-col h-full hover:shadow-md transition-shadow">
-      <div className="h-48 bg-gray-200 relative">
-        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-2 py-1 rounded flex items-center gap-1 text-sm font-bold shadow-sm">
+    <Card className="flex flex-col h-full bg-white rounded-2xl border-gray-100 hover:shadow-xl transition-all duration-300 overflow-hidden group">
+      <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 relative group-hover:scale-[1.02] transition-transform duration-300">
+        <div className="absolute top-4 right-4 bg-white/95 backdrop-blur px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 text-sm font-bold shadow-sm">
           <Star size={16} className="text-yellow-500 fill-yellow-500" />
           {college.rating.toFixed(1)}
         </div>
       </div>
-      <CardContent className="flex flex-col flex-1 gap-4">
+      <CardContent className="flex flex-col flex-1 gap-5 p-6 z-10 bg-white">
         <div>
           <h3 className="text-xl font-bold text-gray-900 line-clamp-2" title={college.name}>
             {college.name}
