@@ -38,111 +38,281 @@ export default function PredictorPage() {
     }
   };
 
-  const getProbabilityStyles = (prob: string) => {
+  const getProbabilityIcon = (prob: string) => {
     switch(prob) {
-      case 'Safe': return 'bg-green-100 text-green-800 border-green-200';
-      case 'Reach': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-      case 'Ambitious': return 'bg-red-100 text-red-800 border-red-200';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'Safe': return '🟢';
+      case 'Reach': return '🟡';
+      case 'Ambitious': return '🔴';
+      default: return '⚪';
     }
   };
 
+  const safeColleges = results?.filter(r => r.probability === 'Safe') || [];
+  const reachColleges = results?.filter(r => r.probability === 'Reach') || [];
+  const ambitiousColleges = results?.filter(r => r.probability === 'Ambitious') || [];
+
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <div className="text-center mb-10">
-        <GraduationCap className="mx-auto h-12 w-12 text-blue-600 mb-4" />
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">College Predictor</h1>
-        <p className="text-gray-600">Enter your rank to see which colleges you can get into based on past year cutoffs.</p>
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-purple-50">
+      {/* Header Section */}
+      <div className="bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-12">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl mb-4">
+              <GraduationCap size={32} />
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">College Admission Predictor</h1>
+            <p className="text-lg text-white/90 max-w-2xl mx-auto">
+              Get personalized college recommendations based on your exam rank and category
+            </p>
+          </div>
+        </div>
       </div>
 
-      <Card className="mb-10 shadow-md border-0 bg-white/50 backdrop-blur">
-        <CardContent className="p-6 sm:p-8">
-          <form onSubmit={handlePredict} className="grid grid-cols-1 md:grid-cols-4 gap-6 items-end">
-            <div>
-              <label htmlFor="exam" className="block text-sm font-semibold text-gray-700 mb-1.5">Exam</label>
-              <Select id="exam" value={form.examName} onChange={e => setForm({...form, examName: e.target.value})}>
-                <option value="JEE Main">JEE Main</option>
-                <option value="MHT CET">MHT CET</option>
-                <option value="COMEDK">COMEDK</option>
-              </Select>
-            </div>
-            <div>
-              <label htmlFor="category" className="block text-sm font-semibold text-gray-700 mb-1.5">Category</label>
-              <Select id="category" value={form.category} onChange={e => setForm({...form, category: e.target.value})}>
-                <option value="General">General</option>
-                <option value="OBC">OBC</option>
-                <option value="SC">SC</option>
-                <option value="ST">ST</option>
-              </Select>
-            </div>
-            <div>
-              <label htmlFor="rank" className="block text-sm font-semibold text-gray-700 mb-1.5">Your Rank</label>
-              <Input 
-                id="rank"
-                type="number" 
-                placeholder="e.g. 15000" 
-                required 
-                min="1"
-                value={form.rank}
-                onChange={e => setForm({...form, rank: e.target.value})}
-              />
-            </div>
-            <div>
-              <Button type="submit" className="w-full" disabled={isLoading || !form.rank}>
-                {isLoading ? <Loader2 className="animate-spin mx-auto" size={20} /> : 'Predict Colleges'}
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        {/* Input Card */}
+        <Card className="mb-8 shadow-xl border-0 -mt-16 relative z-10">
+          <CardContent className="p-8">
+            <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+              <span className="text-2xl">🎯</span>
+              Enter Your Details
+            </h2>
+            
+            <form onSubmit={handlePredict} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <label htmlFor="exam" className="block text-sm font-bold text-gray-700 mb-2">Entrance Exam</label>
+                  <Select 
+                    id="exam" 
+                    value={form.examName} 
+                    onChange={e => setForm({...form, examName: e.target.value})}
+                    className="h-12 text-base"
+                  >
+                    <option value="JEE Main">JEE Main</option>
+                    <option value="MHT CET">MHT CET</option>
+                    <option value="COMEDK">COMEDK</option>
+                  </Select>
+                </div>
+                
+                <div>
+                  <label htmlFor="category" className="block text-sm font-bold text-gray-700 mb-2">Category</label>
+                  <Select 
+                    id="category" 
+                    value={form.category} 
+                    onChange={e => setForm({...form, category: e.target.value})}
+                    className="h-12 text-base"
+                  >
+                    <option value="General">General</option>
+                    <option value="OBC">OBC</option>
+                    <option value="SC">SC</option>
+                    <option value="ST">ST</option>
+                  </Select>
+                </div>
+                
+                <div>
+                  <label htmlFor="rank" className="block text-sm font-bold text-gray-700 mb-2">Your Rank</label>
+                  <Input 
+                    id="rank"
+                    type="number" 
+                    placeholder="e.g. 15000" 
+                    required 
+                    min="1"
+                    value={form.rank}
+                    onChange={e => setForm({...form, rank: e.target.value})}
+                    className="h-12 text-base"
+                  />
+                </div>
+              </div>
+
+              <Button 
+                type="submit" 
+                className="w-full h-14 text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg"
+                disabled={isLoading || !form.rank}
+              >
+                {isLoading ? (
+                  <><Loader2 className="animate-spin mr-2" size={24} /> Analyzing...</>
+                ) : (
+                  <>🎓 Predict My Colleges</>
+                )}
               </Button>
-            </div>
-          </form>
-        </CardContent>
-      </Card>
+            </form>
+          </CardContent>
+        </Card>
 
-      {error && <p className="text-red-500 text-center mb-6">{error}</p>}
+        {error && (
+          <Card className="mb-8 bg-red-50 border-red-200">
+            <CardContent className="p-6 text-center text-red-700 font-medium">
+              {error}
+            </CardContent>
+          </Card>
+        )}
 
-      {results && (
-        <div className="space-y-6">
-          <div className="flex items-center justify-between border-b border-gray-200 pb-4">
-            <h2 className="text-2xl font-bold text-gray-900">Your Chances</h2>
-            <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">{results.length} colleges found</span>
-          </div>
-          
-          {results.length === 0 ? (
-            <Card className="border-gray-100 shadow-sm bg-white">
-              <CardContent className="py-16 flex flex-col items-center text-center">
-                <AlertTriangle className="text-yellow-500 mb-4" size={48} />
-                <h3 className="text-xl font-bold text-gray-900 mb-2">No Matches Found</h3>
-                <p className="text-gray-500 max-w-md">Try adjusting your rank or changing the category to see more options.</p>
+        {/* Results Section */}
+        {results && (
+          <div className="space-y-8">
+            {/* Summary Stats */}
+            <Card className="bg-gradient-to-br from-blue-50 to-purple-50 border-0 shadow-lg">
+              <CardContent className="p-6">
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="text-3xl font-bold text-green-600">{safeColleges.length}</div>
+                    <div className="text-sm text-gray-600 font-medium">Safe Options</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-yellow-600">{reachColleges.length}</div>
+                    <div className="text-sm text-gray-600 font-medium">Reach Options</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-red-600">{ambitiousColleges.length}</div>
+                    <div className="text-sm text-gray-600 font-medium">Ambitious Options</div>
+                  </div>
+                </div>
               </CardContent>
             </Card>
-          ) : (
-            results.map((result: any /* eslint-disable-line @typescript-eslint/no-explicit-any */, idx: number) => (
-              <Card key={idx} className="hover:border-blue-200 transition-colors">
-                <CardContent className="p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                  <div>
-                    <Link href={`/colleges/${result.college.id}`} className="hover:text-blue-600">
-                      <h3 className="text-lg font-bold text-gray-900">{result.college.name}</h3>
-                    </Link>
-                    <p className="text-sm text-gray-500">{result.college.location}</p>
-                  </div>
-                  
-                  <div className="flex items-center gap-6">
-                    <div className="text-right">
-                      <p className="text-sm text-gray-500">Closing Rank ({result.cutoff.year})</p>
-                      <p className="font-bold text-gray-900">{result.cutoff.closingRank}</p>
-                    </div>
-                    
-                    <div className={`px-4 py-2 rounded-full border text-sm font-bold w-28 text-center flex items-center justify-center gap-1 ${getProbabilityStyles(result.probability)}`}>
-                      {result.probability === 'Safe' && <CheckCircle size={14} />}
-                      {result.probability === 'Reach' && <Target size={14} />}
-                      {result.probability === 'Ambitious' && <AlertTriangle size={14} />}
-                      {result.probability}
-                    </div>
-                  </div>
+
+            {/* Info Card */}
+            <Card className="bg-blue-50 border-l-4 border-l-blue-600">
+              <CardContent className="p-6">
+                <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                  💡 How to Read Your Results
+                </h3>
+                <div className="space-y-2 text-sm text-gray-700">
+                  <p><strong className="text-green-700">🟢 Safe:</strong> High chance of admission based on past cutoffs</p>
+                  <p><strong className="text-yellow-700">🟡 Reach:</strong> Competitive but possible with your rank</p>
+                  <p><strong className="text-red-700">🔴 Ambitious:</strong> Challenging but worth trying</p>
+                </div>
+              </CardContent>
+            </Card>
+
+            {results.length === 0 ? (
+              <Card className="border-gray-200 shadow-sm bg-white">
+                <CardContent className="py-16 flex flex-col items-center text-center">
+                  <AlertTriangle className="text-yellow-500 mb-4" size={64} />
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">No Matches Found</h3>
+                  <p className="text-gray-600 max-w-md mb-6">
+                    We couldn't find colleges matching your criteria. Try adjusting your rank or category.
+                  </p>
                 </CardContent>
               </Card>
-            ))
-          )}
-        </div>
-      )}
+            ) : (
+              <>
+                {/* Safe Colleges */}
+                {safeColleges.length > 0 && (
+                  <div>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      🟢 Safe Colleges
+                      <span className="text-sm font-normal text-gray-500">({safeColleges.length})</span>
+                    </h2>
+                    <div className="space-y-3">
+                      {safeColleges.map((result: any /* eslint-disable-line @typescript-eslint/no-explicit-any */, idx: number) => (
+                        <Card key={idx} className="hover:shadow-lg transition-all duration-300 border-l-4 border-l-green-500">
+                          <CardContent className="p-6">
+                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                              <div className="flex-1">
+                                <Link href={`/colleges/${result.college.id}`} className="hover:text-blue-600 transition-colors">
+                                  <h3 className="text-lg font-bold text-gray-900 mb-1">{result.college.name}</h3>
+                                </Link>
+                                <p className="text-sm text-gray-600">{result.college.location}</p>
+                              </div>
+                              
+                              <div className="flex items-center gap-6">
+                                <div className="text-center bg-gray-50 px-4 py-2 rounded-xl">
+                                  <p className="text-xs text-gray-500 mb-1">Closing Rank</p>
+                                  <p className="font-bold text-lg text-gray-900">{result.cutoff.closingRank.toLocaleString()}</p>
+                                  <p className="text-xs text-gray-500">{result.cutoff.year}</p>
+                                </div>
+                                
+                                <div className="bg-green-100 text-green-800 px-4 py-2 rounded-xl border-2 border-green-200 font-bold text-sm min-w-[100px] text-center">
+                                  🟢 Safe
+                                </div>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Reach Colleges */}
+                {reachColleges.length > 0 && (
+                  <div>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      🟡 Reach Colleges
+                      <span className="text-sm font-normal text-gray-500">({reachColleges.length})</span>
+                    </h2>
+                    <div className="space-y-3">
+                      {reachColleges.map((result: any /* eslint-disable-line @typescript-eslint/no-explicit-any */, idx: number) => (
+                        <Card key={idx} className="hover:shadow-lg transition-all duration-300 border-l-4 border-l-yellow-500">
+                          <CardContent className="p-6">
+                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                              <div className="flex-1">
+                                <Link href={`/colleges/${result.college.id}`} className="hover:text-blue-600 transition-colors">
+                                  <h3 className="text-lg font-bold text-gray-900 mb-1">{result.college.name}</h3>
+                                </Link>
+                                <p className="text-sm text-gray-600">{result.college.location}</p>
+                              </div>
+                              
+                              <div className="flex items-center gap-6">
+                                <div className="text-center bg-gray-50 px-4 py-2 rounded-xl">
+                                  <p className="text-xs text-gray-500 mb-1">Closing Rank</p>
+                                  <p className="font-bold text-lg text-gray-900">{result.cutoff.closingRank.toLocaleString()}</p>
+                                  <p className="text-xs text-gray-500">{result.cutoff.year}</p>
+                                </div>
+                                
+                                <div className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-xl border-2 border-yellow-200 font-bold text-sm min-w-[100px] text-center">
+                                  🟡 Reach
+                                </div>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Ambitious Colleges */}
+                {ambitiousColleges.length > 0 && (
+                  <div>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                      🔴 Ambitious Colleges
+                      <span className="text-sm font-normal text-gray-500">({ambitiousColleges.length})</span>
+                    </h2>
+                    <div className="space-y-3">
+                      {ambitiousColleges.map((result: any /* eslint-disable-line @typescript-eslint/no-explicit-any */, idx: number) => (
+                        <Card key={idx} className="hover:shadow-lg transition-all duration-300 border-l-4 border-l-red-500">
+                          <CardContent className="p-6">
+                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                              <div className="flex-1">
+                                <Link href={`/colleges/${result.college.id}`} className="hover:text-blue-600 transition-colors">
+                                  <h3 className="text-lg font-bold text-gray-900 mb-1">{result.college.name}</h3>
+                                </Link>
+                                <p className="text-sm text-gray-600">{result.college.location}</p>
+                              </div>
+                              
+                              <div className="flex items-center gap-6">
+                                <div className="text-center bg-gray-50 px-4 py-2 rounded-xl">
+                                  <p className="text-xs text-gray-500 mb-1">Closing Rank</p>
+                                  <p className="font-bold text-lg text-gray-900">{result.cutoff.closingRank.toLocaleString()}</p>
+                                  <p className="text-xs text-gray-500">{result.cutoff.year}</p>
+                                </div>
+                                
+                                <div className="bg-red-100 text-red-800 px-4 py-2 rounded-xl border-2 border-red-200 font-bold text-sm min-w-[100px] text-center">
+                                  🔴 Ambitious
+                                </div>
+                              </div>
+                            </div>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

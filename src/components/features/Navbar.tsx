@@ -21,13 +21,8 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-          <div className="flex items-center">
-            <Link href="/login" className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
-              Log in
-            </Link>
-            <Link href="/register" className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-              Sign up
-            </Link>
+          <div className="flex items-center space-x-4">
+            {/* Auth links hidden until implementation */}
           </div>
         </div>
       </div>

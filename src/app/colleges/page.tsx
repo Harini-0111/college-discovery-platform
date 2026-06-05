@@ -55,7 +55,8 @@ export default function CollegesPage() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex flex-col lg:flex-row gap-10">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex flex-col lg:flex-row gap-10">
       
       {/* Sidebar Filters */}
       <aside className="w-full lg:w-72 flex-shrink-0">
@@ -160,6 +161,7 @@ export default function CollegesPage() {
         )}
       </div>
 
+    </div>
     </div>
   );
 }

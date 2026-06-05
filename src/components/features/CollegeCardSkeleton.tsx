@@ -3,26 +3,42 @@ import { Card, CardContent } from '@/components/ui/Card';
 
 export const CollegeCardSkeleton = () => {
   return (
-    <Card className="flex flex-col h-full animate-pulse border-gray-100 shadow-sm">
-      <div className="h-48 bg-gray-200"></div>
-      <CardContent className="flex flex-col flex-1 gap-4 p-6">
-        <div>
-          <div className="h-6 bg-gray-200 rounded w-3/4 mb-2"></div>
-          <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+    <Card className="flex flex-col h-full border border-gray-200 shadow-sm overflow-hidden">
+      {/* Shimmer effect container */}
+      <div className="relative overflow-hidden">
+        {/* Header skeleton with shimmer */}
+        <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 relative">
+          <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+          {/* Rating badge skeleton */}
+          <div className="absolute top-4 right-4 w-16 h-7 bg-gray-300 rounded-full"></div>
+        </div>
+      </div>
+
+      <CardContent className="flex flex-col flex-1 p-6 space-y-4">
+        {/* Title skeleton */}
+        <div className="space-y-2">
+          <div className="h-6 bg-gray-200 rounded-lg w-3/4 relative overflow-hidden">
+            <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
+          </div>
+          <div className="h-4 bg-gray-200 rounded-lg w-1/2 relative overflow-hidden">
+            <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4 mt-auto">
-          <div>
-            <div className="h-3 bg-gray-200 rounded w-16 mb-2"></div>
-            <div className="h-4 bg-gray-200 rounded w-20"></div>
-          </div>
-          <div>
-            <div className="h-3 bg-gray-200 rounded w-20 mb-2"></div>
-            <div className="h-4 bg-gray-200 rounded w-24"></div>
+        {/* Divider */}
+        <div className="h-px bg-gray-200"></div>
+
+        {/* Info box skeleton */}
+        <div className="flex-1">
+          <div className="h-20 bg-gray-100 rounded-xl relative overflow-hidden">
+            <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
           </div>
         </div>
 
-        <div className="mt-4 w-full h-10 bg-gray-200 rounded-lg"></div>
+        {/* Button skeleton */}
+        <div className="h-11 bg-gray-200 rounded-lg relative overflow-hidden">
+          <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
+        </div>
       </CardContent>
     </Card>
   );
