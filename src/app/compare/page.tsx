@@ -60,13 +60,14 @@ export default function ComparePage() {
 
       setIsLoadingCompare(true);
       try {
-        const [res1, res2] = await Promise.all([
-          col1Id ? fetch(`/api/colleges/${col1Id}`).then(r => r.json()) : Promise.resolve({ data: null }),
-          col2Id ? fetch(`/api/colleges/${col2Id}`).then(r => r.json()) : Promise.resolve({ data: null }),
-        ]);
+        const ids = [col1Id, col2Id].filter(Boolean).join(',');
+        const res = await fetch(`/api/colleges/compare?ids=${ids}`);
+        if (!res.ok) throw new Error('Failed to fetch comparison data');
+        const json = await res.json();
+        const [first, second] = json.data ?? [];
 
-        setCol1Data(res1.data);
-        setCol2Data(res2.data);
+        setCol1Data(col1Id ? first ?? null : null);
+        setCol2Data(col2Id ? (col1Id && col2Id ? second : first) ?? null : null);
       } catch (error) {
         console.error('Comparison fetch error:', error);
       } finally {

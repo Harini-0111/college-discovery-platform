@@ -6,39 +6,51 @@ export interface PredictorOptions {
   rank: number;
 }
 
+const collegeSelect = {
+  id: true,
+  name: true,
+  slug: true,
+  location: true,
+  baseFees: true,
+  rating: true,
+  placements: true,
+  establishedYear: true,
+  description: true,
+} as const;
+
 export const predictColleges = async ({ examName, category, rank }: PredictorOptions) => {
   const cutoffs = await prisma.cutoff.findMany({
     where: {
-      examName: { equals: examName },
-      category: { equals: category },
-      closingRank: { gte: rank * 0.5 }, 
+      examName,
+      category,
+      closingRank: { gte: rank * 0.5 },
     },
-    include: {
-      college: true
+    select: {
+      closingRank: true,
+      year: true,
+      college: { select: collegeSelect },
     },
     orderBy: {
-      closingRank: 'asc'
+      closingRank: 'asc',
     },
-    take: 20
+    take: 20,
   });
 
-  const recommendations = cutoffs.map(cutoff => {
-    let probability = "Safe";
+  return cutoffs.map((cutoff) => {
+    let probability = 'Safe';
     if (rank > cutoff.closingRank * 1.1) {
-      probability = "Ambitious";
+      probability = 'Ambitious';
     } else if (rank > cutoff.closingRank) {
-      probability = "Reach";
+      probability = 'Reach';
     }
 
     return {
       college: cutoff.college,
       cutoff: {
         closingRank: cutoff.closingRank,
-        year: cutoff.year
+        year: cutoff.year,
       },
-      probability
+      probability,
     };
   });
-
-  return recommendations;
 };

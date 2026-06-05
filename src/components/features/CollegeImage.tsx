@@ -6,14 +6,22 @@ import { getCollegeImageUrl, DEFAULT_CAMPUS_IMAGE } from '@/lib/college-images';
 
 interface CollegeImageProps {
   slug: string;
+  name?: string;
   alt: string;
   className?: string;
   priority?: boolean;
   sizes?: string;
 }
 
-export function CollegeImage({ slug, alt, className = 'object-cover', priority, sizes }: CollegeImageProps) {
-  const [src, setSrc] = useState(getCollegeImageUrl(slug));
+export function CollegeImage({
+  slug,
+  name,
+  alt,
+  className = 'object-cover',
+  priority,
+  sizes,
+}: CollegeImageProps) {
+  const [src, setSrc] = useState(getCollegeImageUrl(slug, name));
 
   return (
     <Image

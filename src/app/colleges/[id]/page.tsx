@@ -56,6 +56,7 @@ export default function CollegeDetailPage() {
       <div className="relative text-white overflow-hidden min-h-[280px] sm:min-h-[320px]">
         <CollegeImage
           slug={college.slug}
+          name={college.name}
           alt={`${college.name} campus`}
           className="object-cover"
           priority

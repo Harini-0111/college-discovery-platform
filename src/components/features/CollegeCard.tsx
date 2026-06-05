@@ -21,6 +21,7 @@ export const CollegeCard = ({ college }: { college: College }) => {
       <div className="relative h-48 overflow-hidden bg-gray-100">
         <CollegeImage
           slug={college.slug}
+          name={college.name}
           alt={`${college.name} campus`}
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />

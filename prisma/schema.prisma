@@ -30,6 +30,10 @@ model College {
   courses         Course[]
   cutoffs         Cutoff[]
   savedBy         SavedCollege[]
+
+  @@index([rating])
+  @@index([baseFees])
+  @@index([location])
 }
 
 model Course {
@@ -39,6 +43,8 @@ model Course {
   durationYears Int
   totalFees     Float
   college       College @relation(fields: [collegeId], references: [id])
+
+  @@index([collegeId])
 }
 
 model SavedCollege {

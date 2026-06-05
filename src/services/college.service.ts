@@ -79,3 +79,30 @@ export const getCollegeById = async (id: string) => {
     },
   });
 };
+
+const compareSelect = {
+  id: true,
+  name: true,
+  location: true,
+  rating: true,
+  baseFees: true,
+  placements: true,
+  _count: { select: { courses: true } },
+} as const;
+
+export const getCollegesCompareData = async (ids: string[]) => {
+  const colleges = await prisma.college.findMany({
+    where: { id: { in: ids } },
+    select: compareSelect,
+  });
+
+  return colleges.map((college) => ({
+    id: college.id,
+    name: college.name,
+    location: college.location,
+    rating: college.rating,
+    baseFees: college.baseFees,
+    placements: college.placements,
+    courses: { length: college._count.courses },
+  }));
+};

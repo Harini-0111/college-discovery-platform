@@ -18,12 +18,11 @@ export const searchColleges = async (options: SearchCollegesOptions) => {
   const whereClause: Prisma.CollegeWhereInput = {};
 
   if (q) {
-    // SQLite uses standard case-insensitive LIKE for 'contains' natively with Prisma
-    whereClause.name = { contains: q };
+    whereClause.name = { contains: q, mode: 'insensitive' };
   }
 
   if (location) {
-    whereClause.location = { contains: location };
+    whereClause.location = { contains: location, mode: 'insensitive' };
   }
 
   if (minFee !== undefined || maxFee !== undefined) {
