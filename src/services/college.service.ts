@@ -37,6 +37,39 @@ export const getColleges = async ({ page = 1, limit = 12 }: GetCollegesOptions) 
   };
 };
 
+export const getFeaturedColleges = async (limit = 3) => {
+  return prisma.college.findMany({
+    take: limit,
+    orderBy: { rating: 'desc' },
+    select: {
+      id: true,
+      name: true,
+      slug: true,
+      location: true,
+      baseFees: true,
+      rating: true,
+      placements: true,
+    },
+  });
+};
+
+export const getPopularColleges = async (limit = 3) => {
+  return prisma.college.findMany({
+    take: limit,
+    skip: 3,
+    orderBy: { rating: 'desc' },
+    select: {
+      id: true,
+      name: true,
+      slug: true,
+      location: true,
+      baseFees: true,
+      rating: true,
+      placements: true,
+    },
+  });
+};
+
 export const getCollegeById = async (id: string) => {
   return prisma.college.findUnique({
     where: { id },

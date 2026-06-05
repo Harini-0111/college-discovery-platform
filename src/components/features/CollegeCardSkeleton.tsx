@@ -7,9 +7,8 @@ export const CollegeCardSkeleton = () => {
       {/* Shimmer effect container */}
       <div className="relative overflow-hidden">
         {/* Header skeleton with shimmer */}
-        <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 relative">
+        <div className="h-48 bg-gray-200 relative">
           <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-          {/* Rating badge skeleton */}
           <div className="absolute top-4 right-4 w-16 h-7 bg-gray-300 rounded-full"></div>
         </div>
       </div>

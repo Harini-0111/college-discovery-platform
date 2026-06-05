@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { MapPin, Star, IndianRupee, BookOpen, Trophy, Loader2 } from 'lucide-react';
+import { CollegeImage } from '@/components/features/CollegeImage';
 
 export default function CollegeDetailPage() {
   const params = useParams();
@@ -50,22 +51,20 @@ export default function CollegeDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
-      <div className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
-            {/* College Initial Badge */}
-            <div className="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex-shrink-0 flex items-center justify-center text-white font-black text-4xl shadow-xl border border-white/30">
-              {college.name.charAt(0)}
-            </div>
-            
+      <div className="relative text-white overflow-hidden min-h-[280px] sm:min-h-[320px]">
+        <CollegeImage
+          slug={college.slug}
+          alt={`${college.name} campus`}
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/60 to-gray-900/30" />
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="max-w-3xl">
             <div className="flex-1">
               <div className="flex items-center gap-3 mb-3">
                 <span className="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-bold border border-white/30">
