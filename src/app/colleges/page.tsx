@@ -4,11 +4,12 @@ import { Input, Select } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { CollegeCard } from '@/components/features/CollegeCard';
 import { CollegeCardSkeleton } from '@/components/features/CollegeCardSkeleton';
-import { Filter, AlertCircle } from 'lucide-react';
+import { Filter, AlertCircle, Loader2, WifiOff } from 'lucide-react';
 
 export default function CollegesPage() {
   const [colleges, setColleges] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState('');
   const [total, setTotal] = useState(0);
 
   const [filters, setFilters] = useState({
@@ -20,28 +21,30 @@ export default function CollegesPage() {
 
   const fetchColleges = useCallback(async () => {
     setIsLoading(true);
+    setError('');
     try {
-      const params = new URLSearchParams();
+      const params = new URLSearchParams({ limit: '100' });
       if (filters.q) params.append('q', filters.q);
       if (filters.location) params.append('location', filters.location);
       if (filters.minRating) params.append('minRating', filters.minRating);
       if (filters.maxFee) params.append('maxFee', filters.maxFee);
       
       const res = await fetch(`/api/colleges/search?${params.toString()}`);
-      if (!res.ok) throw new Error('Failed to fetch');
+      if (!res.ok) throw new Error('Failed to fetch colleges');
       const data = await res.json();
       
       setColleges(data.data || []);
       setTotal(data.meta?.total || 0);
     } catch {
       setColleges([]);
+      setTotal(0);
+      setError('Unable to load colleges right now. Please check your connection and try again.');
     } finally {
       setIsLoading(false);
     }
   }, [filters]);
 
   useEffect(() => {
-    // Debounce the fetch slightly for better UX on typing
     const timeout = setTimeout(() => fetchColleges(), 300);
     return () => clearTimeout(timeout);
   }, [fetchColleges]);
@@ -52,6 +55,31 @@ export default function CollegesPage() {
 
   const handleClearFilters = () => {
     setFilters({ q: '', location: '', minRating: '', maxFee: '' });
+  };
+
+  const renderResultsBadge = () => {
+    if (isLoading) {
+      return (
+        <span className="inline-flex items-center gap-2 bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+          <Loader2 size={14} className="animate-spin" />
+          Loading colleges...
+        </span>
+      );
+    }
+
+    if (error) {
+      return (
+        <span className="bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+          Failed to load
+        </span>
+      );
+    }
+
+    return (
+      <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
+        {total} results found
+      </span>
+    );
   };
 
   return (
@@ -130,14 +158,23 @@ export default function CollegesPage() {
       <div className="flex-1 min-w-0">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-8 gap-4">
           <h1 className="text-3xl font-extrabold text-gray-900 tracking-tight">Explore Colleges</h1>
-          <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold whitespace-nowrap">
-            {total} results found
-          </span>
+          {renderResultsBadge()}
         </div>
 
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {[...Array(6)].map((_, i) => <CollegeCardSkeleton key={i} />)}
+          </div>
+        ) : error ? (
+          <div className="flex flex-col items-center justify-center py-24 bg-red-50 rounded-2xl border border-red-200 shadow-sm text-center px-4">
+            <div className="bg-white p-4 rounded-full mb-4">
+              <WifiOff className="text-red-500" size={48} />
+            </div>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">Couldn&apos;t load colleges</h3>
+            <p className="text-gray-600 mb-6 max-w-md">{error}</p>
+            <Button variant="primary" onClick={fetchColleges}>
+              Try Again
+            </Button>
           </div>
         ) : colleges.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-24 bg-white rounded-2xl border border-gray-100 shadow-sm text-center px-4">
