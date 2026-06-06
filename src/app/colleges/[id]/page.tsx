@@ -100,7 +100,7 @@ export default function CollegeDetailPage() {
       </div>
 
       {/* Quick Stats Bar */}
-      <div className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
+      <div className="bg-white border-b border-gray-200 shadow-sm sticky top-16 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
             <div className="text-center">

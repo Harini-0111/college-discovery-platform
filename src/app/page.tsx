@@ -6,6 +6,8 @@ import { getFeaturedColleges, getPopularColleges } from '@/services/college.serv
 import { HERO_CAMPUS_IMAGE } from '@/lib/college-images';
 import { Search, GraduationCap, ArrowRight, TrendingUp, Award } from 'lucide-react';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const [featuredColleges, popularColleges] = await Promise.all([
     getFeaturedColleges(3),
